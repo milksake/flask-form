@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Form
+{% endblock %}
+
+{% block content %}
+<section>
+    <div class="form-container">
+        <h1>Form</h1>
+        <form action="\profile" method="post">
+            {% for field in fields %}
+                <div>
+                    <h3>{{field.title + ": "}}</h3>
+                    <input type="{{field.typef}}" name="{{field.name}}" placeholder="{{field.placeholder}}">
+                </div>
+            {% endfor %}
+                <button>Submit</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

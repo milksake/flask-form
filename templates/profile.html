@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block content %}
+<section>
+    <div class="form-container">
+        <h1>Profile</h1>
+        <form>
+            {% for key, value in fields.items() %}
+                <div>
+                    <h3>{{key + ": "}}</h3>
+                    <p>{{value}}</p>
+                </div>
+            {% endfor %}
+        </form>
+    </div>
+</section>
+{% endblock %}
